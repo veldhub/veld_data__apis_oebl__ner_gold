@@ -1,0 +1,24 @@
+x-veld:
+  data:
+    about:
+      description: >
+        "NER data in a simple json, where for each text its raw string is stored and its entities in 
+        a list with index offsets and their entity types."
+      topic:
+        - "NLP"
+        - "Machine learning"
+        - "Named entity recognition"
+    type: "folder"
+    path: ./data/
+    format: "json"
+    content:
+      - "gold data"
+      - "NLP gold data"
+      - "Named entity recognition gold data"
+    description: >
+      "transformed NER data from APIS. 'Uncleaned' means that the indices of the annotated entities
+      sometimes are slightly off, and lose something of the word or take in whitespaces. This can be
+      a problem with spaCy which is very strict on token boundaries.  For the cleaned data, the
+      indices of the uncleaned data were corrected to match precise token boundaries.  Redundancies
+      and overlaps were removed."
+
