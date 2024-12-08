@@ -28,27 +28,3 @@ scattered across folders with their respective nlp models, and also spread acros
 deduplicated and transformed it into one consistent data source as json files, where only texts and
 the indices and tags of their contained named entities are persisted.
 
-## data description
-
-### files
-
-[./data/apis_oebl__ner__1_uncleaned.json](./data/apis_oebl__ner__1_uncleaned.json)
-
-The original, but united, data coming from APIS / ÖBL.
-
-[./data/apis_oebl__ner__2_cleaned.json](./data/apis_oebl__ner__2_cleaned.json)
-
-Overlapping entities are removed, index offsets corrected, and duplicates removed. Also texts
-without any entities are removed too, since it's not known if they don't contain any entities (which
-often is not true; quite a few of them contain entities) or if the annotators simply didn't go
-through them (which is more likely, hence they were removed).
-
-In the original uncleaned data, some entity types are suffixed with numbers (e.g. `PER-1337`). These
-were used for identifying entities in a project context, but are probably of less use for NER NLP
-training. This dataset keeps the identifiers.
-
-[./data/apis_oebl__ner__3_cleaned_simplified.json](./data/apis_oebl__ner__3_cleaned_simplified.json)
-
-Same as apis_oebl__ner__2_cleaned.json, but with simplified entities (e.g. `PER` instead of
-`PER-1337`). **Probably it's best to use this data set for NER training.**
-
