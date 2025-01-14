@@ -1,4 +1,4 @@
-# APIS ÖBL NER data
+# veld_data__apis_oebl__ner_gold
 
 Randomized sentences from historical German biographies, containing named entities.
 
